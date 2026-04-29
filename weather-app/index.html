@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicativo de clima com busca por cidade e previsao usando HTML, CSS e JavaScript.">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="hero-panel">
+            <p class="eyebrow">Projeto de portfolio</p>
+            <h1>Previsao do tempo com interface moderna e busca por cidade</h1>
+            <p class="hero-text">
+                Consulte o clima atual e os proximos dias com uma experiencia visual mais forte,
+                responsiva e pronta para seu GitHub.
+            </p>
+
+            <div class="hero-highlights">
+                <article class="highlight-card">
+                    <span class="highlight-label">API</span>
+                    <strong>Open-Meteo</strong>
+                </article>
+                <article class="highlight-card">
+                    <span class="highlight-label">Stack</span>
+                    <strong>HTML + CSS + JS</strong>
+                </article>
+                <article class="highlight-card">
+                    <span class="highlight-label">Foco</span>
+                    <strong>Frontend real</strong>
+                </article>
+            </div>
+        </section>
+
+        <section class="weather-panel">
+            <header class="panel-header">
+                <div>
+                    <p class="section-label">Clima</p>
+                    <h2>Busque uma cidade</h2>
+                </div>
+                <button id="usar-localizacao" class="ghost-button" type="button">
+                    Usar minha localizacao
+                </button>
+            </header>
+
+            <form id="form-busca" class="search-form">
+                <label class="sr-only" for="cidade">Cidade</label>
+                <input id="cidade" name="cidade" type="text" placeholder="Ex: Sao Paulo, Rio de Janeiro, Lisboa">
+                <button type="submit">Buscar clima</button>
+            </form>
+
+            <p id="mensagem-status" class="status-message" aria-live="polite"></p>
+
+            <section id="resultado-clima" class="weather-content hidden">
+                <article class="current-card">
+                    <div class="current-main">
+                        <div>
+                            <p id="localizacao" class="location-name"></p>
+                            <p id="descricao-tempo" class="weather-description"></p>
+                        </div>
+                        <div class="temperature-block">
+                            <span id="temperatura-atual" class="temperature-value"></span>
+                            <span id="icone-tempo" class="weather-icon" aria-hidden="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="current-details">
+                        <article class="detail-card">
+                            <span>Sensacao</span>
+                            <strong id="sensacao-termica"></strong>
+                        </article>
+                        <article class="detail-card">
+                            <span>Vento</span>
+                            <strong id="vento"></strong>
+                        </article>
+                        <article class="detail-card">
+                            <span>Umidade</span>
+                            <strong id="umidade"></strong>
+                        </article>
+                        <article class="detail-card">
+                            <span>Horario local</span>
+                            <strong id="horario-local"></strong>
+                        </article>
+                    </div>
+                </article>
+
+                <section class="forecast-section">
+                    <div class="section-title-row">
+                        <h3>Proximos dias</h3>
+                        <p id="resumo-forecast" class="forecast-summary"></p>
+                    </div>
+
+                    <div id="lista-previsao" class="forecast-grid"></div>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

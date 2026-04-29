@@ -3,103 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
-    <meta name="theme-color" content="#1d6f5f">
-    <meta name="description" content="Aplicativo de lista de tarefas com prioridades, busca e instalacao no navegador.">
+    <title>Portfolio Profissional | Victor Bernardo</title>
+    <meta name="theme-color" content="#0d1b2a">
+    <meta
+        name="description"
+        content="Portfolio profissional de Victor Bernardo com projetos reais em HTML, CSS e JavaScript."
+    >
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="icons/icon-192.svg">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="app-shell">
-        <section class="hero-card">
-            <p class="eyebrow">Organizacao pessoal</p>
-            <h1>Lista de tarefas com foco no que importa</h1>
-            <p class="hero-text">
-                Organize o dia, acompanhe prioridades e mantenha tudo salvo no navegador.
-            </p>
-            <div class="hero-stats">
-                <article class="stat-box">
-                    <span class="stat-label">Total</span>
-                    <strong id="stat-total">0</strong>
+    <div class="page-glow page-glow-left" aria-hidden="true"></div>
+    <div class="page-glow page-glow-right" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <a class="brand-mark" href="#inicio">VB</a>
+        <nav class="site-nav" aria-label="Navegacao principal">
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#servicos">Destaques</a>
+            <a href="#contato">Contato</a>
+        </nav>
+        <a class="header-cta" href="#contato">Falar comigo</a>
+    </header>
+
+    <main>
+        <section class="hero-section reveal" id="inicio">
+            <div class="hero-copy">
+                <p class="eyebrow">Portfolio profissional</p>
+                <h1>Projetos reais para apresentar minha evolucao em front-end com clareza e presenca.</h1>
+                <p class="hero-text">
+                    Sou <strong>Victor Bernardo</strong>, desenvolvedor focado em construir interfaces web com
+                    HTML, CSS e JavaScript puro. Este portfolio reune projetos praticos que mostram minha
+                    evolucao tecnica, organizacao visual e experiencia com aplicacoes funcionais.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="primary-button" href="#projetos">Ver projetos</a>
+                    <a class="secondary-button" href="https://github.com/victorbernardo18-oss?tab=repositories" target="_blank" rel="noreferrer">Abrir GitHub</a>
+                </div>
+
+                <div class="hero-metrics" aria-label="Destaques profissionais">
+                    <article>
+                        <strong>04</strong>
+                        <span>projetos em destaque</span>
+                    </article>
+                    <article>
+                        <strong>HTML CSS JS</strong>
+                        <span>base principal do portfolio</span>
+                    </article>
+                    <article>
+                        <strong>100%</strong>
+                        <span>foco em aprendizado continuo</span>
+                    </article>
+                </div>
+            </div>
+
+            <aside class="hero-panel reveal reveal-delay">
+                <p class="panel-label">Resumo rapido</p>
+                <div class="panel-card">
+                    <span class="panel-kicker">Perfil</span>
+                    <h2>Projetos praticos que mostram fundamentos fortes de interface, logica e experiencia web.</h2>
+                    <p>
+                        Uma apresentacao profissional para reunir demos, repositorios e cases reais em um unico lugar.
+                    </p>
+                </div>
+                <div class="panel-list">
+                    <div>
+                        <span>Especialidade</span>
+                        <strong>Interfaces responsivas e aplicacoes web em JavaScript</strong>
+                    </div>
+                    <div>
+                        <span>Pratica tecnica</span>
+                        <strong>DOM, eventos, localStorage, API, geolocalizacao e PWA</strong>
+                    </div>
+                    <div>
+                        <span>Objetivo</span>
+                        <strong>Transformar estudo em projetos bem apresentados e prontos para avaliacao</strong>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <section class="about-section reveal" id="sobre">
+            <div class="section-heading">
+                <p class="eyebrow">Sobre mim</p>
+                <h2>Uma presenca digital criada para mostrar trabalho de verdade e facilitar novas oportunidades.</h2>
+            </div>
+
+            <div class="about-grid">
+                <article class="about-card">
+                    <h3>Quem sou</h3>
+                    <p>
+                        Sou Victor Bernardo e uso projetos praticos para desenvolver repertorio em interfaces,
+                        interatividade, organizacao de codigo e experiencia do usuario.
+                    </p>
                 </article>
-                <article class="stat-box">
-                    <span class="stat-label">Pendentes</span>
-                    <strong id="stat-pendentes">0</strong>
+                <article class="about-card">
+                    <h3>Como construo</h3>
+                    <p>
+                        Busco criar aplicacoes claras, responsivas e com boa apresentacao visual, sempre praticando
+                        estrutura semantica, manipulacao do DOM e refinamento de layout.
+                    </p>
                 </article>
-                <article class="stat-box">
-                    <span class="stat-label">Concluidas</span>
-                    <strong id="stat-concluidas">0</strong>
+                <article class="about-card">
+                    <h3>O que voce encontra aqui</h3>
+                    <p>
+                        Uma selecao dos meus projetos com descricao, tecnologias, links para abrir cada app dentro
+                        deste portfolio e acesso aos repositorios publicados.
+                    </p>
                 </article>
             </div>
         </section>
 
-        <section class="todo-card">
-            <header class="card-header">
-                <div>
-                    <p class="section-label">Painel</p>
-                    <h2>Minhas tarefas</h2>
-                </div>
-                <div class="header-actions">
-                    <button id="instalar-app" class="ghost-button" type="button" hidden>
-                        Instalar app
-                    </button>
-                    <button id="limpar-concluidas" class="ghost-button" type="button">
-                        Limpar concluidas
-                    </button>
-                </div>
-            </header>
+        <section class="projects-section reveal" id="projetos">
+            <div class="section-heading">
+                <p class="eyebrow">Projetos em destaque</p>
+                <h2>Projetos reais que demonstram pratica constante com front-end, logica e experiencia web.</h2>
+            </div>
 
-            <form id="form-tarefa" class="task-form">
-                <label class="sr-only" for="tarefa">Descricao da tarefa</label>
-                <input id="tarefa" name="tarefa" type="text" maxlength="80" placeholder="Ex: revisar projeto do portfolio">
+            <div class="project-grid">
+                <article class="project-card featured">
+                    <span class="project-tag">Projeto real</span>
+                    <h3>To Do List</h3>
+                    <p>
+                        Aplicativo de lista de tarefas com prioridades, filtros, busca, persistencia local
+                        e suporte para instalacao no navegador.
+                    </p>
+                    <ul class="project-points">
+                        <li>CRUD completo de tarefas</li>
+                        <li>Busca, filtros e prioridades</li>
+                        <li>Modo app com service worker</li>
+                    </ul>
+                    <div class="project-actions">
+                        <a class="project-link primary-link" href="todo-list-app/index.html">Abrir projeto</a>
+                        <a class="project-link secondary-link" href="https://github.com/victorbernardo18-oss/todo-list" target="_blank" rel="noreferrer">Ver repositorio</a>
+                    </div>
+                </article>
 
-                <label class="sr-only" for="prioridade">Prioridade</label>
-                <select id="prioridade" name="prioridade">
-                    <option value="baixa">Baixa prioridade</option>
-                    <option value="media" selected>Media prioridade</option>
-                    <option value="alta">Alta prioridade</option>
-                </select>
+                <article class="project-card">
+                    <span class="project-tag muted">Projeto real</span>
+                    <h3>Weather App</h3>
+                    <p>
+                        Aplicacao de clima com busca por cidade, previsao atual, geolocalizacao e consumo de API externa.
+                    </p>
+                    <ul class="project-points">
+                        <li>Integracao com Open-Meteo API</li>
+                        <li>Uso de geolocalizacao do navegador</li>
+                        <li>Interface responsiva para desktop e mobile</li>
+                    </ul>
+                    <div class="project-actions">
+                        <a class="project-link primary-link" href="weather-app/index.html">Abrir projeto</a>
+                        <a class="project-link secondary-link" href="https://github.com/victorbernardo18-oss/weather-app" target="_blank" rel="noreferrer">Ver repositorio</a>
+                    </div>
+                </article>
 
-                <button id="botao" type="submit">Adicionar</button>
-            </form>
+                <article class="project-card">
+                    <span class="project-tag muted">Projeto real</span>
+                    <h3>Controle Financeiro</h3>
+                    <p>
+                        Projeto de organizacao financeira pessoal com foco em formularios, calculos e estrutura de dashboard.
+                    </p>
+                    <ul class="project-points">
+                        <li>Pratica com arrays, objetos e calculos</li>
+                        <li>Manipulacao do DOM em interface funcional</li>
+                        <li>Base pronta para evolucoes futuras</li>
+                    </ul>
+                    <div class="project-actions">
+                        <a class="project-link primary-link" href="controle-financeiro/index.html">Abrir projeto</a>
+                        <span class="project-link disabled-link">Repositorio ainda local</span>
+                    </div>
+                </article>
 
-            <section class="toolbar" aria-label="Ferramentas da lista">
-                <div class="search-box">
-                    <label class="sr-only" for="busca">Buscar tarefa</label>
-                    <input id="busca" type="text" placeholder="Buscar tarefa">
-                </div>
+                <article class="project-card">
+                    <span class="project-tag muted">Projeto real</span>
+                    <h3>Projeto Sorteio</h3>
+                    <p>
+                        Aplicacao simples de sorteio de numeros para praticar entrada de dados, logica e interacao com JavaScript.
+                    </p>
+                    <ul class="project-points">
+                        <li>Captura e tratamento de valores</li>
+                        <li>Uso de Math.random para sorteio</li>
+                        <li>Fluxo objetivo e facil de testar</li>
+                    </ul>
+                    <div class="project-actions">
+                        <a class="project-link primary-link" href="projeto-sorteio/index.html">Abrir projeto</a>
+                        <a class="project-link secondary-link" href="https://github.com/victorbernardo18-oss/PROJETOSORTEIO" target="_blank" rel="noreferrer">Ver repositorio</a>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-                <div class="filters" role="group" aria-label="Filtrar tarefas">
-                    <button class="filter-button active" id="todas" type="button" data-filter="todas">Todas</button>
-                    <button class="filter-button" id="pendentes" type="button" data-filter="pendentes">Pendentes</button>
-                    <button class="filter-button" id="concluidas" type="button" data-filter="concluidas">Concluidas</button>
-                </div>
-            </section>
+        <section class="services-section reveal" id="servicos">
+            <div class="section-heading">
+                <p class="eyebrow">Destaques</p>
+                <h2>Pontos que este portfolio evidencia sobre minha forma de construir projetos.</h2>
+            </div>
 
-            <p id="contador" class="counter"></p>
-            <p id="status-app" class="app-status" aria-live="polite"></p>
-            <ul id="lista" class="task-list" aria-live="polite"></ul>
+            <div class="service-grid">
+                <article class="service-card">
+                    <span>01</span>
+                    <h3>Interfaces responsivas</h3>
+                    <p>Layouts pensados para funcionar bem no celular e no desktop, com leitura clara e boa hierarquia visual.</p>
+                </article>
+                <article class="service-card">
+                    <span>02</span>
+                    <h3>JavaScript na pratica</h3>
+                    <p>Projetos com logica, eventos, manipulacao do DOM, persistencia local e consumo de APIs.</p>
+                </article>
+                <article class="service-card">
+                    <span>03</span>
+                    <h3>Apresentacao profissional</h3>
+                    <p>Organizacao dos meus cases para facilitar avaliacao tecnica, navegacao e leitura do portfolio.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact-section reveal" id="contato">
+            <div class="contact-copy">
+                <p class="eyebrow">Contato</p>
+                <h2>Uma base profissional pronta para mostrar trabalho, repertorio e potencial de evolucao.</h2>
+                <p>
+                    Este espaco concentra meus principais pontos de contato e acesso aos projetos publicados no GitHub.
+                </p>
+            </div>
+
+            <div class="contact-card">
+                <a href="mailto:victorbernardo18@gmail.com">victorbernardo18@gmail.com</a>
+                <a href="https://www.linkedin.com/in/jooao-vitor-bernardo/" target="_blank" rel="noreferrer">LinkedIn profissional</a>
+                <a href="https://github.com/victorbernardo18-oss?tab=repositories" target="_blank" rel="noreferrer">GitHub / victorbernardo18-oss</a>
+                <p class="contact-note">Disponivel para oportunidades, colaboracoes e evolucao continua na area de tecnologia.</p>
+            </div>
         </section>
     </main>
 
-    <template id="template-tarefa">
-        <li class="task-item">
-            <button class="task-toggle" type="button" aria-label="Marcar tarefa"></button>
-            <div class="task-content">
-                <div class="task-main-row">
-                    <span class="task-text"></span>
-                    <span class="task-priority"></span>
-                </div>
-                <p class="task-meta"></p>
-            </div>
-            <div class="task-actions">
-                <button class="icon-button edit-button" type="button">Editar</button>
-                <button class="icon-button delete-button" type="button">Remover</button>
-            </div>
-        </li>
-    </template>
+    <footer class="site-footer">
+        <p>(c) <span id="current-year"></span> Victor Bernardo. Portfolio profissional.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

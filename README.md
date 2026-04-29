@@ -1,37 +1,27 @@
-# To-Do List
+# Portfolio Victor Bernardo
 
-Aplicacao web de lista de tarefas criada com **HTML, CSS e JavaScript puro**. O projeto foi desenvolvido para praticar manipulacao do DOM, organizacao de estado, persistencia no navegador e recursos de PWA, com uma interface responsiva e simples de usar no dia a dia.
+Portfolio profissional publicado no GitHub para reunir projetos de front-end feitos com HTML, CSS e JavaScript puro.
 
-[![Status](https://img.shields.io/badge/status-concluido-1d6f5f?style=for-the-badge)](https://github.com/victorbernardo18-oss/todo-list)
+[![Status](https://img.shields.io/badge/status-concluido-d6a24a?style=for-the-badge)](https://github.com/victorbernardo18-oss/todo-list)
 [![JavaScript](https://img.shields.io/badge/JavaScript-f7df1e?style=for-the-badge&logo=javascript&logoColor=222)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-[![PWA](https://img.shields.io/badge/PWA-0f172a?style=for-the-badge)](https://web.dev/progressive-web-apps/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-pronto-0d1b2a?style=for-the-badge)](https://victorbernardo18-oss.github.io/todo-list/)
 
 ## Sobre o projeto
 
-Este projeto simula uma ferramenta de organizacao pessoal, permitindo cadastrar, acompanhar e gerenciar tarefas diretamente no navegador. Os dados ficam salvos no `localStorage`, entao a lista continua disponivel mesmo depois de fechar a pagina.
+Este repositorio funciona como uma vitrine profissional com acesso rapido aos projetos criados durante os estudos de front-end.
 
-O objetivo principal foi transformar uma To-Do List basica em uma aplicacao mais completa para portfolio, com recursos que demonstram dominio dos fundamentos de front-end.
+A pagina principal apresenta Victor Bernardo, destaca habilidades praticadas e organiza os principais projetos em cards com links para abrir cada aplicacao.
 
-## Link do projeto
-
-Quando o GitHub Pages estiver ativo neste repositorio, o projeto podera ser acessado em:
+## Link online
 
 [https://victorbernardo18-oss.github.io/todo-list/](https://victorbernardo18-oss.github.io/todo-list/)
 
-## Funcionalidades
+## Projetos incluidos
 
-- Adicionar novas tarefas
-- Editar tarefas existentes
-- Remover tarefas individualmente
-- Marcar tarefas como concluidas
-- Definir prioridade baixa, media ou alta
-- Buscar tarefas em tempo real
-- Filtrar por todas, pendentes e concluidas
-- Limpar tarefas concluidas
-- Salvar dados no navegador com `localStorage`
-- Exibir resumo com total, pendentes e concluidas
-- Instalar como aplicativo no navegador
-- Usar com suporte basico offline via Service Worker
+- To Do List com prioridades, filtros, busca, `localStorage` e suporte de PWA.
+- Weather App com busca de clima, geolocalizacao e consumo de API.
+- Controle Financeiro para pratica de formularios, calculos e dashboard.
+- Projeto Sorteio para pratica de logica e interacao com JavaScript.
 
 ## Tecnologias utilizadas
 
@@ -43,16 +33,22 @@ Quando o GitHub Pages estiver ativo neste repositorio, o projeto podera ser aces
 - `Service Worker`
 - `Web App Manifest`
 
-## Aprendizados praticados
+## Estrutura do projeto
 
-- Criacao de interfaces responsivas
-- Manipulacao de elementos HTML com JavaScript
-- Eventos de formulario, busca, filtros e botoes de acao
-- Renderizacao dinamica de listas
-- Organizacao de dados em arrays de objetos
-- Persistencia de dados no navegador
-- Estrutura inicial de Progressive Web App
-- Separacao entre estrutura, estilo e comportamento
+```text
+todo-list/
+|-- controle-financeiro/
+|-- icons/
+|-- projeto-sorteio/
+|-- todo-list-app/
+|-- weather-app/
+|-- index.html
+|-- manifest.json
+|-- README.md
+|-- script.js
+|-- style.css
+|-- sw.js
+```
 
 ## Como executar localmente
 
@@ -80,28 +76,6 @@ python -m http.server 5500
 http://localhost:5500
 ```
 
-## Estrutura do projeto
-
-```text
-todo-list/
-|-- icons/
-|-- index.html
-|-- manifest.json
-|-- README.md
-|-- script.js
-|-- style.css
-|-- sw.js
-```
-
-## Possiveis melhorias futuras
-
-- Adicionar data limite para tarefas
-- Criar modo escuro
-- Permitir ordenacao por prioridade
-- Substituir `alert` e `prompt` por modais personalizados
-- Adicionar testes automatizados para as funcoes principais
-
 ## Autor
 
 Desenvolvido por [Victor Bernardo](https://github.com/victorbernardo18-oss).
-
